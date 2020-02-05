@@ -1,0 +1,15 @@
+service: serverless-test-api
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: us-west-1
+
+functions:
+  main:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+
